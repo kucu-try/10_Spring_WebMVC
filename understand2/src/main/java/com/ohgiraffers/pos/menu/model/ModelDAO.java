@@ -10,5 +10,6 @@ public interface ModelDAO {
 
     List<MenuDTO> selectAll();
 
+    MenuDTO searchMenu(int code);
 
 }

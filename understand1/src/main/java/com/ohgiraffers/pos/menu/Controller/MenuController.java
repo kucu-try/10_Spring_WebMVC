@@ -90,4 +90,10 @@ public class MenuController {
 
         return mv;
     }
+
+    @PostMapping("destroy")
+    public String destroy() {
+        return "/menu/delete";
+    }
+
 }

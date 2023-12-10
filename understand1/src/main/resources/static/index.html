@@ -17,11 +17,10 @@
         <button>메뉴 수정</button>
     </form>
 
-    <button onclick="location.href='/menu/regist'">메뉴 등록</button><br>
-    <button onclick="location.href='/menu/update'">메뉴 수정</button><br>
-
-    <button onclick="location.href='/menu/delete'">메뉴 삭제</button>
-
+    <form action="/menu/destroy" method="post">
+        권한 : <input type="text" name="auth"/>
+        <button>메뉴 삭제</button>
+    </form>
 
 
 </body>

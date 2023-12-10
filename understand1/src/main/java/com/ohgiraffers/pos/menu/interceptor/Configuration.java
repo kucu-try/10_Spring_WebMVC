@@ -18,6 +18,9 @@ public class Configuration implements WebMvcConfigurer {
 
         registry.addInterceptor(interceptor)
                 .addPathPatterns("/menu/change");
+
+        registry.addInterceptor(interceptor)
+                .addPathPatterns("/menu/destroy");
     }
 
 

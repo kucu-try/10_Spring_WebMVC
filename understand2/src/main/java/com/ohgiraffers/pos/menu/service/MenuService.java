@@ -12,11 +12,21 @@ import java.util.Objects;
 public class MenuService {
     @Autowired
     private ModelDAO modelDAO;
+
     public List<MenuDTO> selectAll() {
         List<MenuDTO> allMenus= modelDAO.selectAll();
 
         return allMenus;
     }
 
+    public MenuDTO searchMenu(int code) {
+        MenuDTO menu = modelDAO.searchMenu(code);
+
+        if(Objects.isNull(menu)){
+            throw new NullPointerException();
+        }else {
+            return menu;
+        }
+    }
 
 }

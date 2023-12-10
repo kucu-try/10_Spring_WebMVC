@@ -5,7 +5,7 @@
 <mapper namespace="com.ohgiraffers.pos.menu.model.ModelDAO">
 
 
-    <resultMap id="resultMap" type="com.ohgiraffers.pos.menu.dto.MenuDTO">
+    <resultMap id="menuResult" type="com.ohgiraffers.pos.menu.dto.MenuDTO">
         <id property="code" column="MENU_CODE"/>
         <result property="name" column="MENU_NAME"/>
         <result property="price" column="MENU_PRICE"/>
@@ -13,11 +13,20 @@
         <result property="status" column="ORDERABLE_STATUS"/>
     </resultMap>
 
-    <select id="selectAll" resultMap="resultMap">
+    <select id="selectAll" resultMap="menuResult">
         SELECT
             *
         FROM TBL_MENU
         WHERE ORDERABLE_STATUS='Y'
+    </select>
+
+    <select id="searchMenu" resultMap="menuResult">
+        SELECT
+        *
+        FROM
+        TBL_MENU
+        WHERE
+        MENU_CODE = ${code}
     </select>
 
 </mapper>
