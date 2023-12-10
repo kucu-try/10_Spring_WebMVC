@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <button onclick="location.href='/menu/all'">전체 조회</button> <br>
+
+    <form action="/menu/insert" method="post">
+        권한 : <input type="text" name="auth"/>
+        <button type="submit">메뉴 등록</button>
+    </form>
+
+    <form action="/menu/change" method="post">
+        권한 : <input type="text" name="auth"/>
+        <button>메뉴 수정</button>
+    </form>
+
+    <button onclick="location.href='/menu/regist'">메뉴 등록</button><br>
+    <button onclick="location.href='/menu/update'">메뉴 수정</button><br>
+
+    <button onclick="location.href='/menu/delete'">메뉴 삭제</button>
+
+
+
+</body>
+</html>
